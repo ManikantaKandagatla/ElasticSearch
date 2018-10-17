@@ -22,9 +22,9 @@ public class SampleDataController
 {
     private SampleDataDao sampleDataDao;
 
-    public SampleDataController(SampleDataDao ctaDao)
+    public SampleDataController(SampleDataDao sampleDataDao)
     {
-        this.sampleDataDao = ctaDao;
+        this.sampleDataDao = sampleDataDao;
     }
 
     /*
