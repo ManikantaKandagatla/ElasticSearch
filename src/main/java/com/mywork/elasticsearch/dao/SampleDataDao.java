@@ -69,7 +69,7 @@ public class SampleDataDao
                     sampledata.getDataid(), dataMap);
             if (response != null && oldData != null)
             {
-                Map<String, Object> auditdata = getCTAAuditbyId(sampledata.getDataid());
+                Map<String, Object> auditdata = getSampleDataAuditbyId(sampledata.getDataid());
                 if (auditdata != null)
                 {
                     List<Map<String, Object>> audits = (List<Map<String, Object>>) auditdata
@@ -122,7 +122,7 @@ public class SampleDataDao
         return updateResponse;
     }
 
-    public Map<String, Object> getCTAAuditbyId(String dataid)
+    public Map<String, Object> getSampleDataAuditbyId(String dataid)
     {
         Map<String, Object> ctaAudit = null;
         GetRequest getRequest = new GetRequest(BASEINDEX + "_box_audit", "box", dataid);
